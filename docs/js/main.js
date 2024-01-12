@@ -31,7 +31,7 @@ var arkaplan = ["img/BSEU_Wallpaper.png", "img/BM_Wallpaper.png"];
 // headerLogo varsayılan değerleri belirleme
 var headerLogo = ["img/BSEU_Logo.png", "img/BM_Logo.png"];
 // headerText varsayılan değerleri belirleme
-var headerText = ["BŞEÜ Web Portal", "BŞEÜ BM Web Portal"];
+var headerText = ["BŞEÜ Web Portal [BETA]", "BŞEÜ BM Web Portal [BETA]"];
 
 /* -----------------------   Header için Sonu   ------------------------- */
 
