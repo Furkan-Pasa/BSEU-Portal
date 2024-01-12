@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- 12 Ocak 2024 -->
+
+<html data-theme="dark">
+
+<head>
+
+    <title>BŞEÜ Web Portal</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-language" content="tr" />
+    <meta name="author" content="Furkan Çelik" />
+    <meta name="title" content="BŞEÜ Web Portal" />
+    <meta name="description" content="BŞEÜ Web Portal">
+    <link rel="icon" href="img/logo-yuvarlak.ico" sizes="256x256">
+
+    <meta name="viewport" content="viewport-fit=cover"> <!-- IOS Desteği için gerekli -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:image" content="img/BSEU_Logo.png" />
+    <meta property="og:author" content="Furkan Çelik" />
+    <meta property="og:title" content="BŞEÜ Web Portal" />
+    <meta property="og:description" content="BŞEÜ Web Portal" />
+
+    <!-- <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/agenor-neue"> 'Agenor Neue' -->
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <link rel="stylesheet" href="css/output.css">
+
+</head>
+
+<body class="min-h-screen">
+
+    <div class="flex w-full justify-center"> <!-- Ana Sayfa Div -->
+
+        <div id="divim-de-divim"> <!-- Orta Div -->
+
+            <header class=""> <!-- ÜSTTEKİ NAV BAR  -->
+
+                <div class="p-4">
+                    <h1 id="header_text">BŞEÜ Web Portal</h1>
+                </div>
+
+                <!-- Karanlık Mod Iconu -->
+                <label class="swap swap-rotate">
+
+                    <!-- checkbox -->
+                    <input type="checkbox" class="theme-controller" value="synthwave" />
+
+                    <!-- güneş icon -->
+                    <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+
+                    <!-- ay icon -->
+                    <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+
+                </label>
+
+
+            </header>
+
+
+            <main class="">
+
+                <!-- Main Header Div -->
+                <div id="main_header">
+
+                    <img onclick="gecisYap()" width="150px" id="header_logo" src="img/BSEU_Logo.png" alt="Header Logo">
+
+                </div>
+
+
+                <!--  DÜĞMELERİN BAŞLANGICI -->
+                <div id="main-iç" class="relative">
+
+                    <div id="BSEU-DIV">
+
+                        <div class="main-cift">
+
+                            <a class="a-button-BSEU" href="https://obs.bilecik.edu.tr" target="_blank">
+                                <button class="buttonum">OBS
+                                </button>
+                            </a>
+
+                            <a class="a-button-BSEU" href="https://ders.bilecik.edu.tr" target="_blank">
+                                <button class="buttonum">UZEM
+                                </button>
+                            </a>
+
+
+                            <a class="a-button-BSEU" href="https://katalog.bilecik.edu.tr" target="_blank">
+                                <button class="buttonum">KÜTÜPHANE
+                                </button>
+                            </a>
+
+                            <a class="a-button-BSEU" href="https://www.bilecik.edu.tr/main/arama/4" target="_blank">
+                                <button class="buttonum">BŞEÜ DUYURU
+                                </button>
+                            </a>
+
+
+                            <a class="a-button-BSEU" href="pages/akademik_takvim.html" target="">
+                                <button class="buttonum">Akademik Takvim
+                                </button>
+                            </a>
+
+                            <a class="a-button-BSEU" href="https://ebs.bilecik.edu.tr" target="_blank">
+                                <button class="buttonum">MÜFREDAT
+                                </button>
+                            </a>
+
+
+                        </div>
+
+                        <div class="main-cift pt-0">
+
+                            <a class="a-button-BSEU"
+                                href="https://bilecik.edu.tr/sks/Icerik/Yemek_Men%C3%BCs%C3%BC_cc6e6" target="_blank">
+                                <button class="buttonum">Yemek Menüsü
+                                </button>
+                            </a>
+
+                            <a class="a-button-BSEU" href="pages/yemek_listesi.html" target="">
+                                <button class="buttonum">Aylık Yemek Menüsü
+                                </button>
+                            </a>
+
+                        </div>
+
+                        <div class="main-tek pt-0">
+                            <a class="a-button-BSEU" href="https://yemekhane-puanla.vercel.app/" target="_blank">
+                                <button class="buttonum">BŞEÜ Yemekhane Oylama Sitesi
+                                </button>
+                            </a>
+                        </div>
+
+
+                        <div class="main-tek-small bg-red pt-1">
+                            <a class="a-button-BSEU" href="" target="_blank">
+                                <button class="buttonum">Daha Fazla Göster...
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="BM-DIV" class="hidden">
+
+
+                        <div class="main-cift">
+
+                            <a class="a-button-BM" href="https://obs.bilecik.edu.tr/ogrenci/ogrencianasayfa.aspx"
+                                target="_blank">
+                                <button class="buttonum">OBS
+                                </button>
+                            </a>
+
+                            <a class="a-button-BM" href="https://ders.bilecik.edu.tr/my/" target="_blank">
+                                <button class="buttonum">UZEM
+                                </button>
+                            </a>
+
+
+                            <a class="a-button-BM" href="https://bilecik.edu.tr/muhendislik/arama/4" target="_blank">
+                                <button class="buttonum">Mühendislik Duyuru
+                                </button>
+                            </a>
+
+                            <a class="a-button-BM" href="https://www.bilecik.edu.tr/bilgisayar/arama/4" target="_blank">
+                                <button class="buttonum">BM Duyuru
+                                </button>
+                            </a>
+
+
+                            <a class="a-button-BM" href="pages/akademik_takvim.html" target="">
+                                <button class="buttonum">Akademik Takvim
+                                </button>
+                            </a>
+
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">BM Müfredat
+                                </button>
+                            </a>
+
+
+                        </div>
+
+                        <div class="main-cift pt-0">
+
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Öğrenci İşleri
+                                </button>
+                            </a>
+
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">BM İletişim
+                                </button>
+                            </a>
+
+                        </div>
+
+                        <div class="main-tek pt-0">
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Tasarım Çalışması II
+                                </button>
+                            </a>
+                        </div>
+
+
+                        <div class="main-tek-small bg-red pt-1">
+                            <a class="a-button-BM" href="" target="_blank">
+                                <button class="buttonum">Daha Fazla Göster...
+                                </button>
+                            </a>
+                        </div>
+
+
+
+
+                    </div> <!-- GİZLİ BM DİVİ -->
+
+
+
+
+                    <div id="alt-nav" class="">
+
+                        <button id="firstNav" class="text-sky-600 active" onclick="gecisBSEU()">BŞEÜ</button>
+
+                        <button id="secondNav" class="text-violet-600" onclick="gecisBM()">BM</button>
+
+                    </div>
+
+
+
+
+                </div> <!-- BŞEÜ VE BM İÇEREN MAİN İÇ DİVİ -->
+
+            </main>
+
+        </div> <!-- Ortadaki divim-de-divim -->
+
+    </div> <!-- Ana Sayfa Geniş Div -->
+
+
+
+
+
+    <!-- ALTTAKİ NAV BAR BETA TEST -->
+    <!-- <footer>
+                <div class="btm-nav">
+
+                    <button id="firstNav" class="text-primary active" onclick="gecisBSEU()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </button>
+
+                    <button id="secondNav" class="text-primary" onclick="gecisBM()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+
+                </div>
+
+
+                <div>  EN ALTTAKİ DÜĞME FONKSİYONLARI BOZUK ACTİVE TOGGLE BOZUK
+                                SAYFAYI DEĞİŞTİREN DÜĞMELER BETA TEST
+                    <div class="flex justify-center p-4 shadow-md">
+                        <button class="btn btn-error hover:transition-all" onclick="gecisYap()">Resmi
+                            Değiştir</button>
+                    </div>
+                    <div class="flex justify-center p-4 shadow-md">
+                        <button id="firstButton" class="btn btn-warning" onclick="gecisBSEU()">BŞEÜ</button>
+                        <button id="secondButton" class="btn btn-outline btn-info" onclick="gecisBM()">BM</button>
+                    </div>
+                </div>
+            </footer> -->
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
