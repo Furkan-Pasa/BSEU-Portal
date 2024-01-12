@@ -1,3 +1,4 @@
-# BSEU-Portal
+# BSEU Web Portal Sayfası Kaynak Kodları
 
- BSEU-Portal Web sitesinin Kaynak Kodları
+# BSEU Web Portal Linki:  
+https://furkan-pasa.github.io/BSEU-Portal/
