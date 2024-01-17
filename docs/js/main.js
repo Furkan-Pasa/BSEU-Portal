@@ -26,7 +26,7 @@ else {
 var arkaplan1 = ["-45deg, rgba(238,119,82,1) 0%, rgba(231,25,205,1) 27%, rgba(255,111,66,1) 50%, rgba(231,25,205,1) 75%, rgba(238,119,82,1) 100%", "-45deg, rgba(231,25,205,1) 12%, rgba(114,82,238,1) 30%, rgba(200,10,249,1) 45%, rgba(200,10,249,1) 55%, rgba(114,82,238,1) 70%, rgba(231,25,205,1) 88%"];
 
 // arkaplan2 varsayılan değerleri belirleme
-var arkaplan2 = ["../img/BSEU_Wallpaper.png", "../img/BM_Wallpaper.png"];
+var arkaplan2 = ["../img/BSEU_Wallpaper.jpg", "../img/BM_Wallpaper.jpg"];
 
 
 

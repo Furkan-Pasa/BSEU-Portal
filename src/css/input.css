@@ -33,6 +33,7 @@
         background: var(--yeniArkaplan1);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
+        @apply gecisEffect;
     }
 
     /* Desktop Görünüm İçin */
@@ -47,8 +48,8 @@
         }
 
         #divim-de-divim {
-            background: rgba(52, 0, 52, 0.171);
-            backdrop-filter: blur(4px);
+            background: rgba(52, 0, 52, 0.15);
+            backdrop-filter: blur(3px);
         }
     }
 
@@ -69,16 +70,11 @@
 
 @layer components {
 
-    /* Scrollbar Özelleştirmesi */
-    .section::-webkit-scrollbar {
-        height: 100px;
-    }
-
     #divim-de-divim {
         @apply justify-center min-h-screen;
 
         background: rgba(52, 0, 52, 0.171);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(3px);
 
         /* https://tailwindcss.com/docs/position#fixed-positioning-elements */
         @apply relative;
