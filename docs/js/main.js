@@ -1,4 +1,4 @@
-// JS FILE
+// Furkan "Paşa" Çelik
 
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
 var index = 0;
@@ -17,6 +17,9 @@ else {
 
 
 
+
+
+
 /* ----------------   Body için Varsayılan Değerler   ------------------- */
 
 // arkaplan1 varsayılan değerleri belirleme
@@ -24,8 +27,6 @@ var arkaplan1 = ["-45deg, rgba(238,119,82,1) 0%, rgba(231,25,205,1) 27%, rgba(25
 
 // arkaplan2 varsayılan değerleri belirleme
 var arkaplan2 = ["../img/BSEU_Wallpaper.png", "../img/BM_Wallpaper.png"];
-
-/* ------------------------   Body için Sonu   -------------------------- */
 
 
 
@@ -35,8 +36,6 @@ var arkaplan2 = ["../img/BSEU_Wallpaper.png", "../img/BM_Wallpaper.png"];
 var headerLogo = ["img/BSEU_Logo.png", "img/BM_Logo.png"];
 // headerText varsayılan değerleri belirleme
 var headerText = ["BŞEÜ Web Portal [BETA]", "BŞEÜ BM Web Portal [BETA]"];
-
-/* -----------------------   Header için Sonu   ------------------------- */
 
 
 
@@ -52,8 +51,6 @@ if (index == 1) {
     document.getElementById("BM-DIV").classList.toggle("hidden");
 } else { }
 
-/* ------------------------   Main için Son   --------------------------- */
-
 
 
 /* -----------------   Nav için Varsayılan Değerler   ------------------- */
@@ -65,7 +62,9 @@ if (index == 1) {
     document.getElementById("BM-DIV").classList.toggle("active");
 } else { }
 
-/* ------------------------   Nav için Son   ---------------------------- */
+
+
+
 
 
 sayfaUpdate();
