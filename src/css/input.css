@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-    * {
-        /* @apply border-dashed border-2 border-fuchsia-400; */
+    * {}
+
+    :root {
+        background: rgb(35, 166, 213);
+        --yeniArkaplan1: linear-gradient(-45deg, rgba(238, 119, 82, 1) 0%, rgba(231, 25, 205, 1) 27%, rgba(255, 111, 66, 1) 50%, rgba(231, 25, 205, 1) 75%, rgba(238, 119, 82, 1) 100%);
+        --yeniArkaplan2: url("../img/BSEU_Wallpaper.png");
+
+        /* Header için */
+        --font_list_1: monospace, sans-serif;
+        /* Button için */
+        --font_list_2: "Agenor Neue", 'Open Sans', monospace, sans-serif;
     }
 }
 
@@ -15,29 +24,49 @@
         @apply transition-all duration-1000 ease-in-out;
     }
 
+    /* Mobil Görünüm İçin */
+    body {
+        background: var(--yeniArkaplan1);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+
+    /* Desktop Görünüm İçin */
+    @media (min-width: 640px) {
+        body {
+            /* Arkaplan için değerler */
+            background-image: var(--yeniArkaplan2);
+            background-size: none;
+            animation: none;
+            background-attachment: fixed;
+            @apply bg-center bg-top bg-no-repeat bg-cover gecisEffect;
+        }
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 }
 
 @layer components {
 
-    body {
-        /* Arkaplan için değerler */
-        @apply bg-center bg-top bg-no-repeat bg-cover gecisEffect;
-        background-attachment: fixed;
-
-        /* @apply flex flex-col h-screen; */
-        /* !!! */
-    }
-
     #divim-de-divim {
-
-        /* !!! TEXT efekt değiştirilecek !!! */
-        /* @apply font-mono font-bold text-white leading-6; */
-        /* background: rgba(255, 160, 255, 0.1); */
-
+        @apply justify-center min-h-screen;
         background: rgba(52, 0, 52, 0.171);
         backdrop-filter: blur(4px);
 
-        @apply justify-center min-h-screen;
+        /* https://tailwindcss.com/docs/position#fixed-positioning-elements */
+        @apply relative;
 
         /* !!! Dış efekt değiştirilecek !!! */
         @apply shadow-md rounded-md;
@@ -46,16 +75,20 @@
         @apply w-full sm:basis-[40rem];
     }
 
-    header {
 
+    #header {
+        @apply sticky top-0 left-0 right-0;
+    }
+
+    #header_div {
         /* !!! Header Text Ayarları !!! */
-        @apply text-primary bg-neutral;
+        @apply text-primary bg-base-100;
+        font-family: var(--font_list_1);
         backdrop-filter: blur(10px);
-
         @apply flex justify-center;
 
-        @apply sticky left-0 top-0;
     }
+
 
 
     #main {
@@ -84,11 +117,11 @@
 
 
     .main-cift {
-        @apply p-6 grid grid-cols-2 gap-6;
+        @apply p-6 grid grid-cols-2 gap-3 sm:gap-6;
     }
 
     .main-tek {
-        @apply p-6 grid grid-cols-1 gap-6;
+        @apply p-6 grid grid-cols-1 gap-3 sm:gap-6;
     }
 
     .main-tek-small {
@@ -102,9 +135,10 @@
         @apply rounded-full sm:rounded-lg;
 
         /* !!! Efekt değiştirilecek !!! */
-        @apply shadow-md p-1;
+        @apply shadow-md p-[0.1875rem];
 
-        background-color: rgba(3, 105, 161, 0.6);
+        background-color: rgb(231, 98, 57);
+        font-family: var(--font_list_2);
     }
 
     .a-button-BM {
@@ -114,18 +148,16 @@
         @apply rounded-full sm:rounded-lg;
 
         /* !!! Efekt değiştirilecek !!! */
-        @apply shadow-md p-1;
+        @apply shadow-md p-[0.1875rem];
 
-        background-color: rgba(91, 33, 182, 0.6);
+        background-color: rgb(102, 8, 143);
+        font-family: var(--font_list_2);
     }
 
     .buttonum {
         @apply btn;
-
         /* !!! Desktop Görünüm İçin Değerler !!! */
         @apply rounded-full sm:rounded-lg;
-
-        /* @apply border border-solid border-2 border-secondary; İPTAL */
     }
 
 
@@ -135,58 +167,21 @@
         @apply btm-nav sticky bottom-0;
         /* Responsive Ayarları */
         @apply w-full sm:basis-[40rem];
+    }
 
+    #firstNav {
+        @apply text-orange-500;
+        font-family: var(--font_list_2);
+    }
+
+    #secondNav {
+        @apply text-purple-700;
+        font-family: var(--font_list_2);
     }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .btm-nav-v2 {
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        padding-bottom: env(safe-area-inset-bottom);
-        height: 4rem;
-        --tw-bg-opacity: 1;
-        background-color: var(--fallback-b1, oklch(var(--b1)/var(--tw-bg-opacity)));
-        color: currentColor
-    }
-
-    .btm-nav-v2>* {
-        position: relative;
-        display: flex;
-        height: 100%;
-        flex-basis: 100%;
-        cursor: pointer;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.25rem;
-        border-color: currentColor
-    }
 
 }
