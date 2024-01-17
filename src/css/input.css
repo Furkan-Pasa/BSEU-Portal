@@ -45,6 +45,11 @@
             background-attachment: fixed;
             @apply bg-center bg-top bg-no-repeat bg-cover gecisEffect;
         }
+
+        #divim-de-divim {
+            background: rgba(52, 0, 52, 0.171);
+            backdrop-filter: blur(4px);
+        }
     }
 
     @keyframes gradient {
@@ -64,8 +69,14 @@
 
 @layer components {
 
+    /* Scrollbar Özelleştirmesi */
+    .section::-webkit-scrollbar {
+        height: 100px;
+    }
+
     #divim-de-divim {
         @apply justify-center min-h-screen;
+
         background: rgba(52, 0, 52, 0.171);
         backdrop-filter: blur(4px);
 
@@ -175,11 +186,13 @@
 
     #firstNav {
         @apply text-orange-500;
+        @apply p-1 flex justify-center;
         font-family: var(--font_list_3);
     }
 
     #secondNav {
         @apply text-purple-700;
+        @apply p-1 flex justify-center;
         font-family: var(--font_list_3);
     }
 

@@ -1,6 +1,6 @@
-/*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
-*/
+/* Furkan "Paşa" Çelik */
+
+/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1044,6 +1044,8 @@ html {
   --font_list_1: monospace, sans-serif;
   /* Button için */
   --font_list_2: "Agenor Neue", 'Open Sans', monospace, sans-serif;
+  /* NavBar için */
+  --font_list_3: "Agenor Neue", 'Open Sans', monospace, sans-serif;
 }
 
 *, ::before, ::after {
@@ -2110,6 +2112,8 @@ html {
   border-top-width: 4px;
 }
 
+/* Scrollbar Özelleştirmesi */
+
 #divim-de-divim {
   min-height: 100vh;
   justify-content: center;
@@ -2568,13 +2572,19 @@ html {
 #firstNav {
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity));
-  font-family: var(--font_list_2);
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  font-family: var(--font_list_3);
 }
 
 #secondNav {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
-  font-family: var(--font_list_2);
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  font-family: var(--font_list_3);
 }
 
 .flex {
@@ -2666,6 +2676,12 @@ body {
     transition-property: all;
     transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #divim-de-divim {
+    background: rgba(52, 0, 52, 0.171);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 
