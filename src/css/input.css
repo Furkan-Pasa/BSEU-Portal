@@ -109,7 +109,6 @@
     #main_header {
         /* !!! Dış efekt değiştirilecek !!! */
         @apply shadow-md;
-
         @apply flex justify-center p-5;
     }
 
