@@ -70,7 +70,7 @@
             <main class="">
 
                 <!-- Main Header Div -->
-                <div id="main_header">
+                <div id="main_header" class="gecisEffect">
 
                     <img onclick="gecisYap()" width="150px" id="header_logo" src="img/BSEU_Logo.png" alt="Header Logo">
 
@@ -80,7 +80,7 @@
                 <!--  DÜĞMELERİN BAŞLANGICI -->
                 <div id="main-iç" class="">
 
-                    <div id="BSEU-DIV">
+                    <div id="BSEU-DIV" class="mainSwap">
 
                         <div class="main-cift">
 
@@ -147,15 +147,31 @@
                             </a>
                         </div>
 
+                        <div class="main-cift pt-0">
+
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://pvs.bilecik.edu.tr/"
+                                target="_blank">
+                                <button class="buttonum">PVS
+                                </button>
+                            </a>
+
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://rehber.bilecik.edu.tr/" target="">
+                                <button class="buttonum">Rehber
+                                </button>
+                            </a>
+
+                        </div>
 
                         <div class="main-cift pt-1">
 
-                            <a class="a-button-BSEU" href="https://sofra.bilecik.edu.tr/" target="_blank">
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://sofra.bilecik.edu.tr/"
+                                target="_blank">
                                 <button class="buttonum">Sofra
                                 </button>
                             </a>
 
-                            <a class="a-button-BSEU" href="https://ogrenci.bilecik.edu.tr/" target="_blank">
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://ogrenci.bilecik.edu.tr/"
+                                target="_blank">
                                 <button class="buttonum">Web Mail
                                 </button>
                             </a>
@@ -164,26 +180,13 @@
 
                         <div class="main-cift pt-0">
 
-                            <a class="a-button-BSEU" href="https://pvs.bilecik.edu.tr/" target="_blank">
-                                <button class="buttonum">PVS
-                                </button>
-                            </a>
-
-                            <a class="a-button-BSEU" href="https://rehber.bilecik.edu.tr/" target="">
-                                <button class="buttonum">Rehber
-                                </button>
-                            </a>
-
-                        </div>
-
-                        <div class="main-cift pt-0">
-
-                            <a class="a-button-BSEU" href="https://acikkaynak.bilecik.edu.tr/" target="_blank">
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://acikkaynak.bilecik.edu.tr/"
+                                target="_blank">
                                 <button class="buttonum">Akademik Arşiv
                                 </button>
                             </a>
 
-                            <a class="a-button-BSEU" href="https://video.bilecik.edu.tr/" target="">
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://video.bilecik.edu.tr/" target="">
                                 <button class="buttonum">Video
                                 </button>
                             </a>
@@ -192,12 +195,14 @@
 
                         <div class="main-cift pt-0">
 
-                            <a class="a-button-BSEU" href="https://wiki.bilecik.edu.tr/" target="_blank">
+                            <a class="a-button-BSEU a-button-BSEU-koyu" href="https://wiki.bilecik.edu.tr/"
+                                target="_blank">
                                 <button class="buttonum">BŞEÜ Wiki
                                 </button>
                             </a>
 
-                            <a class="a-button-BSEU" href="https://kms.kaysis.gov.tr/Home/Kurum/52300778" target="">
+                            <a class="a-button-BSEU a-button-BSEU-koyu"
+                                href="https://kms.kaysis.gov.tr/Home/Kurum/52300778" target="">
                                 <button class="buttonum">Yönetmelik
                                 </button>
                             </a>
@@ -217,7 +222,7 @@
 
 
 
-                    <div id="BM-DIV" class="hidden">
+                    <div id="BM-DIV" class="mainSwap">
 
 
                         <div class="main-cift">
@@ -284,11 +289,12 @@
                         </div>
 
                         <div class="main-tek pt-0">
-                            <a class="a-button-BM" href="" target="">
+                            <a class="a-button-BM" href="" target="" style="background-color: #4e009c;">
                                 <button class="buttonum">... Yeni Site Yakında ...
                                 </button>
                             </a>
                         </div>
+
 
                         <div class="main-cift pt-0">
 
@@ -318,6 +324,25 @@
 
                         </div>
 
+
+
+                        <div class="main-cift pt-0">
+                            <div class="main-tek p-0 pl-10 pr-10">
+                                <a class="a-button-BM" href="mailto:iletisim.furkancelik@gmail.com?subject=B%C5%9EE%C3%9C%20Web%20Portal%20Hakk%C4%B1nda" target="" style="background-color: #4e009c;">
+                                    <button class="buttonum">İletişim İçin
+                                    </button>
+                                </a>
+                            </div>
+
+                            <div class="main-tek p-0 pl-10 pr-10">
+                                <a class="a-button-BM" href="" target="" style="background-color: #4e009c;">
+                                    <button class="buttonum">...Yakında...
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+
                         <!-- <div class="main-tek-small bg-red pt-1">
                             <a class="a-button-BM" href="" target="">
                                 <button class="buttonum">Daha Fazla Göster...
@@ -341,7 +366,7 @@
                             BŞEÜ
                         </button>
 
-                        <button id="secondNav" class="" onclick="gecisBM()">
+                        <button id="secondNav" class="active" onclick="gecisBM()">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -390,7 +415,7 @@
     </div> -->
 
     <script src="js/main.js"></script>
-    
+
     <script type="text/javascript">
         document.oncontextmenu = new Function("return false");
     </script>

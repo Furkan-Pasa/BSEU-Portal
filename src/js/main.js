@@ -1,21 +1,26 @@
 // Furkan "Paşa" Çelik
 
+
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
 var index = 0;
 
 if (index == 0) {
     console.log("Index değeri 0 olarak ayarlandı.");
+    document.getElementById("BSEU-DIV").classList.remove("mainSwap");
+    document.getElementById("secondNav").classList.remove("active");
 }
 else if (index == 1) {
     console.log("Index değeri 1 olarak ayarlandı.");
+    document.getElementById("BM-DIV").classList.remove("mainSwap");
+    document.getElementById("firstNav").classList.remove("active");
 }
 else {
     console.log("Index değeri 0 ve 1 değeri dışında bir değer almış. Değer: " + index);
     console.log("Index değeri varsayılan değer olan 0 olarak ayarlandı.");
     index = 0;
+    document.getElementById("BSEU-DIV").classList.remove("mainSwap");
+    document.getElementById("secondNav").classList.remove("active");
 }
-
-
 
 
 
@@ -30,6 +35,7 @@ var arkaplan2 = ["../img/BSEU_Wallpaper.jpg", "../img/BM_Wallpaper.jpg"];
 
 
 
+
 /* ---------------   Header için Varsayılan Değerler   ------------------ */
 
 // headerLogo varsayılan değerleri belirleme
@@ -39,35 +45,12 @@ var headerText = ["BŞEÜ Web Portal [BETA]", "BŞEÜ BM Web Portal [BETA]"];
 
 
 
-/* ----------------   Main için Varsayılan Değerler   ------------------- */
 
-var BSEU_DIV = document.getElementById('BSEU-DIV');
-var BM_DIV = document.getElementById('BM-DIV');
-
-// Varsayılan Main içeriği değiştirme
-
-if (index == 1) {
-    document.getElementById("BSEU-DIV").classList.toggle("hidden");
-    document.getElementById("BM-DIV").classList.toggle("hidden");
-} else { }
-
-
-
-/* -----------------   Nav için Varsayılan Değerler   ------------------- */
-
-const firstNav = document.getElementById("firstNav");
-const secondNav = document.getElementById("secondNav");
-if (index == 1) {
-    document.getElementById("BSEU-DIV").classList.toggle("active");
-    document.getElementById("BM-DIV").classList.toggle("active");
-} else { }
-
-
-
-
+/* -----------------   Fonksiyonlar   ------------------- */
 
 
 sayfaUpdate();
+
 
 function sayfaUpdate() {
 
@@ -89,12 +72,12 @@ function gecisYap() {
     sayfaUpdate();
 
     // Main içeriği değiştirme
-    document.getElementById("BSEU-DIV").classList.toggle("hidden");
-    document.getElementById("BM-DIV").classList.toggle("hidden");
+    document.getElementById("BSEU-DIV").classList.toggle("mainSwap");
+    document.getElementById("BM-DIV").classList.toggle("mainSwap");
 
     // Nav bar class değiştirme
-    firstNav.classList.toggle("active");
-    secondNav.classList.toggle("active");
+    document.getElementById("firstNav").classList.toggle("active");
+    document.getElementById("secondNav").classList.toggle("active");
 
 }
 
@@ -106,12 +89,12 @@ function gecisBSEU() {
     sayfaUpdate();
 
     // Main içerik değiştirme
-    document.getElementById("BSEU-DIV").classList.remove("hidden");
-    document.getElementById("BM-DIV").classList.add("hidden");
+    document.getElementById("BSEU-DIV").classList.remove("mainSwap");
+    document.getElementById("BM-DIV").classList.add("mainSwap");
 
     // Nav bar class değiştirme
-    firstNav.classList.add("active");
-    secondNav.classList.remove("active");
+    document.getElementById("firstNav").classList.add("active");
+    document.getElementById("secondNav").classList.remove("active");
 
 }
 
@@ -122,12 +105,12 @@ function gecisBM() {
     sayfaUpdate();
 
     // Main içerik değiştirme
-    document.getElementById("BSEU-DIV").classList.add("hidden");
-    document.getElementById("BM-DIV").classList.remove("hidden");
+    document.getElementById("BSEU-DIV").classList.add("mainSwap");
+    document.getElementById("BM-DIV").classList.remove("mainSwap");
 
     // Nav bar class değiştirme
-    firstNav.classList.remove("active");
-    secondNav.classList.add("active");
+    document.getElementById("firstNav").classList.remove("active");
+    document.getElementById("secondNav").classList.add("active");
 
 }
 
@@ -156,10 +139,10 @@ function toggleDiv_old() {
     divler.forEach(function (div) {
         if (div.classList.contains('visible')) {
             div.classList.remove('visible');
-            div.classList.add('hidden');
+            div.classList.add('mainSwap');
         }
-        else if (div.classList.contains('hidden')) {
-            div.classList.remove('hidden');
+        else if (div.classList.contains('mainSwap')) {
+            div.classList.remove('mainSwap');
             div.classList.add('visible');
         }
         else {

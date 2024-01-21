@@ -1037,9 +1037,9 @@ html {
 }
 
 :root {
-  background: rgb(35, 166, 213);
+  background: rgb(49, 0, 69);
   --yeniArkaplan1: linear-gradient(-45deg, rgba(238, 119, 82, 1) 0%, rgba(231, 25, 205, 1) 27%, rgba(255, 111, 66, 1) 50%, rgba(231, 25, 205, 1) 75%, rgba(238, 119, 82, 1) 100%);
-  --yeniArkaplan2: url("../img/BSEU_Wallpaper.png");
+  --yeniArkaplan2: url("../img/Taslak.jpg");
   /* Header için */
   --font_list_1: monospace, sans-serif;
   /* Button için */
@@ -1720,7 +1720,7 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hidden {
+.mainSwap {
   display: none;
   /* display: block; */
   /* display: flex; */
@@ -1780,6 +1780,10 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   background-color: rgb(231, 98, 57);
   font-family: var(--font_list_2);
+}
+
+.a-button-BSEU-koyu {
+  background-color: rgb(177, 63, 28);
 }
 
 .a-button-BM {
@@ -2133,10 +2137,6 @@ html {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -2169,8 +2169,20 @@ html {
   fill: currentColor;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
 .pt-0 {
@@ -2188,11 +2200,17 @@ html {
 
 /* Sayfa Geçiş Efekti */
 
+.gecisEffect {
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Mobil Görünüm İçin */
 
 body {
   background: var(--yeniArkaplan1);
-  background-size: 400% 400%;
+  background-size: 300% 300%;
   animation: gradient 15s ease infinite;
   transition-property: all;
   transition-duration: 1000ms;
