@@ -8,7 +8,7 @@
     * {}
 
     :root {
-        background: rgb(49, 0, 69);
+        background: rgb(36, 29, 42);
         --yeniArkaplan1: linear-gradient(-45deg, rgba(238, 119, 82, 1) 0%, rgba(231, 25, 205, 1) 27%, rgba(255, 111, 66, 1) 50%, rgba(231, 25, 205, 1) 75%, rgba(238, 119, 82, 1) 100%);
         --yeniArkaplan2: url("../img/Wallpaper.png");
 
