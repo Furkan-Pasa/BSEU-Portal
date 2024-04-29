@@ -2,7 +2,7 @@
 
 
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
-var index = 0;
+var index = 1;
 
 if (index == 0) {
     console.log("Index değeri 0 olarak ayarlandı.");
@@ -24,7 +24,6 @@ else {
 
 
 
-
 /* ----------------   Body için Varsayılan Değerler   ------------------- */
 
 // arkaplan1 varsayılan değerleri belirleme
@@ -35,14 +34,12 @@ var arkaplan2 = ["../img/BSEU_Wallpaper.jpg", "../img/BM_Wallpaper.jpg"];
 
 
 
-
 /* ---------------   Header için Varsayılan Değerler   ------------------ */
 
 // headerLogo varsayılan değerleri belirleme
 var headerLogo = ["img/BSEU_Logo.png", "img/BM_Logo.png"];
 // headerText varsayılan değerleri belirleme
 var headerText = ["BŞEÜ Web Portal [BETA]", "BŞEÜ BM Web Portal [BETA]"];
-
 
 
 
