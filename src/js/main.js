@@ -1,6 +1,5 @@
 // Furkan "Paşa" Çelik
 
-
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
 var index = 1;
 
