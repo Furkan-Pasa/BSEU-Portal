@@ -1,3 +1,5 @@
+/* Furkan "Paşa" Çelik */
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -118,26 +120,4 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
-
-/* Hata durumu için stil */
-.error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #e74c3c;
-    text-align: center;
-    padding: 20px;
-}
-
-.error h2 {
-    margin-bottom: 10px;
-}
-
-.error p {
-    color: #666;
-    font-size: 14px;
 }
