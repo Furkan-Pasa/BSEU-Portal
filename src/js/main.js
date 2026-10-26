@@ -1,7 +1,7 @@
 // Furkan "Paşa" Çelik
 
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
-var index = 1;
+var index = Number(localStorage.getItem("index") ?? 1);
 
 if (index == 0) {
     console.log("Index değeri 0 olarak ayarlandı.");
@@ -50,6 +50,7 @@ sayfaUpdate();
 
 function sayfaUpdate() {
 
+    localStorage.setItem("index", index);
     var yeniArkaplan1 = arkaplan1[index];
     document.documentElement.style.setProperty('--yeniArkaplan1', 'linear-gradient(' + yeniArkaplan1 + ')');
     var yeniArkaplan2 = arkaplan2[index];
