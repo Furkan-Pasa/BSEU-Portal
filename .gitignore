@@ -1,3 +1,11 @@
-
+# Dependencies
 node_modules/
-src_yedekler/
+npm-debug.log*
+
+# Editor
+.vscode/
+
+# OS Files
+Thumbs.db
+Desktop.ini
+*.lnk
