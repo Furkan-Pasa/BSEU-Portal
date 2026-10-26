@@ -1,3 +1,4 @@
+// 26 Ekim 2026
 // Furkan "Paşa" Çelik
 
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
