@@ -1,0 +1,25 @@
+{
+  "name": "BŞEÜ Web Portal",
+  "short_name": "BŞEÜ Portal",
+  "description": "Bilecik Şeyh Edebali Üniversitesi öğrencileri için hızlı erişim ve navigatör web portalı",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#241d2a",
+  "theme_color": "#1d232a",
+  "icons": [
+    {
+      "src": "img/logo-yuvarlak.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/BSEU_Logo.png",
+      "sizes": "450x450",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

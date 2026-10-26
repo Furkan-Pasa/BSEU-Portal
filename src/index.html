@@ -13,6 +13,9 @@
     <meta name="title" content="BŞEÜ Web Portal" />
     <meta name="description" content="BŞEÜ Web Portal">
     <link rel="icon" href="img/logo-yuvarlak.ico" sizes="256x256">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/BSEU_Logo.png">
+    <meta name="theme-color" content="#1d232a">
 
     <meta name="viewport" content="viewport-fit=cover"> <!-- IOS Desteği için gerekli -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -480,6 +483,12 @@
     </div> -->
 
     <script src="js/main.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
 
     <script type="text/javascript">
         document.oncontextmenu = new Function("return false");
