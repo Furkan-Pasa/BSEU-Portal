@@ -135,10 +135,6 @@
         @apply p-6 grid grid-cols-1 gap-3 sm:gap-6;
     }
 
-    .main-tek-small {
-        @apply p-6 flex justify-center;
-    }
-
     .a-button-BSEU {
         @apply grid place-items-stretch;
 
