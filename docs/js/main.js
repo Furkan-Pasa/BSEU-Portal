@@ -115,35 +115,3 @@ function gecisBM() {
 
 
 
-
-
-function toggleDiv_old() {
-
-    const firstButton = document.getElementById("firstButton");
-    const secondButton = document.getElementById("secondButton");
-
-    // Belirli bir sınıfı değişkene atama
-    var divsClass = 'divler';
-    // var div_BSEU = 'BSEU-DIV';
-    // var div_BM = 'BM-DIV';
-
-    // Değişkenin içindeki sınıfa sahip olan tüm div elementlerini bulma
-    var divler = document.querySelectorAll('.' + divsClass);
-    // var div_BSEU_ALL = document.querySelectorAll('.' + div_BSEU);
-    // var div_BM_ALL = document.querySelectorAll('.' + div_BM);
-
-    // Her bir div elementini gezerek görünürlük sınıfını değiştirme
-    divler.forEach(function (div) {
-        if (div.classList.contains('visible')) {
-            div.classList.remove('visible');
-            div.classList.add('mainSwap');
-        }
-        else if (div.classList.contains('mainSwap')) {
-            div.classList.remove('mainSwap');
-            div.classList.add('visible');
-        }
-        else {
-            console.log("Div Toggle da Hata Var");
-        }
-    });
-}
