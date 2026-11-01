@@ -1,7 +1,7 @@
-// 26 Ekim 2026
+// 1 Kasım 2026
 // Furkan "Paşa" Çelik - BŞEÜ Web Portal Service Worker
 
-const CACHE_NAME = "bseu-portal-v2";
+const CACHE_NAME = "bseu-portal-v2.3.0";
 const ASSETS = [
     "./",
     "./index.html",
@@ -12,6 +12,8 @@ const ASSETS = [
     "./js/pages.js",
     "./img/BSEU_Logo.png",
     "./img/BM_Logo.png",
+    "./img/BSEU_Wallpaper.jpg",
+    "./img/BM_Wallpaper.jpg",
     "./img/logo-yuvarlak.ico",
     "./fonts/AgenorNeue-Regular.otf",
     "./fonts/OpenSans-Medium.ttf"
@@ -44,8 +46,10 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
         fetch(event.request)
             .then((response) => {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                if (response && response.status === 200) {
+                    const clone = response.clone();
+                    caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                }
                 return response;
             })
             .catch(() => caches.match(event.request))
