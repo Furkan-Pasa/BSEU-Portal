@@ -1,7 +1,7 @@
-// 1 Kasım 2026
+// 5 Kasım 2026
 // Furkan "Paşa" Çelik - BŞEÜ Web Portal Service Worker
 
-const CACHE_NAME = "bseu-portal-v2.3.0";
+const CACHE_NAME = "bseu-portal-v2.4.1";
 const ASSETS = [
     "./",
     "./index.html",
@@ -16,13 +16,36 @@ const ASSETS = [
     "./img/BM_Wallpaper.jpg",
     "./img/logo-yuvarlak.ico",
     "./fonts/AgenorNeue-Regular.otf",
-    "./fonts/OpenSans-Medium.ttf"
+    "./fonts/OpenSans-Medium.ttf",
+    "./pages/akademik_takvim.html",
+    "./pages/sinav_programi1.html",
+    "./pages/sinav_programi2.html",
+    "./pages/sinav_programi3.html",
+    "./pages/yemek_listesi.html",
+    "./pages/akademik_takvim.jpg",
+    "./pages/sinav_programi1.jpg",
+    "./pages/sinav_programi2.jpg",
+    "./pages/sinav_programi3.webp",
+    "./pages/yemek_listesi.webp"
 ];
 
-self.addEventListener("install", (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+// Tüm dosyaları kontrol edip güncel hallerini önbelleğe kaydeder
+function updateAllAssets() {
+    return caches.open(CACHE_NAME).then((cache) =>
+        Promise.allSettled(
+            ASSETS.map((url) =>
+                fetch(url).then((response) => {
+                    if (response && response.status === 200) {
+                        return cache.put(url, response);
+                    }
+                })
+            )
+        )
     );
+}
+
+self.addEventListener("install", (event) => {
+    event.waitUntil(updateAllAssets());
     self.skipWaiting();
 });
 
@@ -43,12 +66,19 @@ self.addEventListener("fetch", (event) => {
         return;
     }
 
+    const url = new URL(event.request.url);
+    const isHomePage = event.request.mode === "navigate" &&
+        (url.pathname.endsWith("/") || url.pathname.endsWith("/index.html"));
+
     event.respondWith(
         fetch(event.request)
             .then((response) => {
                 if (response && response.status === 200) {
                     const clone = response.clone();
                     caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                }
+                if (isHomePage) {
+                    event.waitUntil(updateAllAssets());
                 }
                 return response;
             })
