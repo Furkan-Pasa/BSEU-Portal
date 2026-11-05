@@ -1,4 +1,4 @@
-/* 16 Temmuz 2025 */
+/* 5 Kasım 2026 */
 /* Furkan "Paşa" Çelik */
 
 /* CSS Reset */
@@ -16,6 +16,53 @@ body {
     /* Yatay kaydırma için */
     overflow-y: auto;
     /* Dikey kaydırma için */
+}
+
+/* Ana Sayfaya Dön Butonu */
+.back-button {
+    position: fixed;
+    top: max(14px, env(safe-area-inset-top));
+    left: max(14px, env(safe-area-inset-left));
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(29, 35, 42, 0.82);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.back-button svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: rgba(29, 35, 42, 0.95);
+    border-color: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+}
+
+.back-button:hover svg {
+    transform: translateX(-2px);
+}
+
+.back-button:active {
+    transform: translateY(0) scale(0.94);
 }
 
 .container {
@@ -48,6 +95,18 @@ body {
 
 /* Mobil cihazlar için özel ayarlar */
 @media (max-width: 768px) {
+    .back-button {
+        top: max(10px, env(safe-area-inset-top));
+        left: max(10px, env(safe-area-inset-left));
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-button svg {
+        width: 22px;
+        height: 22px;
+    }
+
     .container {
         padding: 0;
         align-items: flex-start;
