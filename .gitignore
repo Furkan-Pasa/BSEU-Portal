@@ -4,6 +4,7 @@ npm-debug.log*
 
 # Editor
 .vscode/
+.nogit
 
 # OS Files
 Thumbs.db
