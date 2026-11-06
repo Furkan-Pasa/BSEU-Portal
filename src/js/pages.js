@@ -1,4 +1,4 @@
-// 16 Temmuz 2025
+// 6 Kasım 2026
 // Furkan "Paşa" Çelik
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,11 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
         container.style.display = 'flex';
     }
 
-    // Resim yüklendiğinde
-    img.addEventListener('load', showContent);
+    // Hata durumunda mesaj göster
+    function showError() {
+        loading.style.padding = '20px';
+        loading.style.textAlign = 'center';
+        loading.textContent = 'Görsel yüklenemedi. Lütfen internet bağlantınızı kontrol edip sayfayı yenileyin.';
+    }
 
-    // Cache'den yüklenmişse
-    if (img.complete && img.naturalWidth > 0) {
-        showContent();
+    // Resim yüklendiğinde veya hata verdiğinde
+    img.addEventListener('load', showContent);
+    img.addEventListener('error', showError);
+
+    // Cache'den yüklenmişse veya yükleme tamamlanmışsa
+    if (img.complete) {
+        if (img.naturalWidth > 0) {
+            showContent();
+        } else {
+            showError();
+        }
     }
 });
