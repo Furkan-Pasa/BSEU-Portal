@@ -1,4 +1,4 @@
-// 26 Ekim 2026
+// 17 Kasım 2026
 // Furkan "Paşa" Çelik
 
 // Varsayılan arayüz pozisyonu 0=BŞEÜ & 1=BM
@@ -59,6 +59,7 @@ function sayfaUpdate() {
 
     document.getElementById("header_logo").src = headerLogo[index];
     document.getElementById("header_text").textContent = headerText[index];
+    document.title = headerText[index];
 }
 
 
