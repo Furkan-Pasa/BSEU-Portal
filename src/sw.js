@@ -1,7 +1,7 @@
-// 5 Kasım 2026
+// 18 Kasım 2026
 // Furkan "Paşa" Çelik - BŞEÜ Web Portal Service Worker
 
-const CACHE_NAME = "bseu-portal-v2.4.1";
+const CACHE_NAME = "bseu-portal-v2.5.0";
 const ASSETS = [
     "./",
     "./index.html",

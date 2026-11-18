@@ -1,7 +1,7 @@
-// 5 Kasım 2026
+// 18 Kasım 2026
 // Furkan "Paşa" Çelik - BŞEÜ Web Portal Service Worker
 
-const CACHE_NAME = "bseu-portal-v2.4.1";
+const CACHE_NAME = "bseu-portal-v2.5.0";
 const ASSETS = [
     "./",
     "./index.html",
@@ -22,9 +22,9 @@ const ASSETS = [
     "./pages/sinav_programi2.html",
     "./pages/sinav_programi3.html",
     "./pages/yemek_listesi.html",
-    "./pages/akademik_takvim.jpg",
-    "./pages/sinav_programi1.jpg",
-    "./pages/sinav_programi2.jpg",
+    "./pages/akademik_takvim.webp",
+    "./pages/sinav_programi1.webp",
+    "./pages/sinav_programi2.webp",
     "./pages/sinav_programi3.webp",
     "./pages/yemek_listesi.webp"
 ];
